@@ -1,0 +1,3 @@
+apart from docker, there are other container services i.e RKT 
+  Anyone can integrate with K8s, k8 give CRI(Container Runtime Interface) to work with rkt
+if you need other container servivce then need to follow OCI(open container Initiative) imagespac and runtimespec
