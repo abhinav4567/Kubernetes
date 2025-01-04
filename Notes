@@ -1,0 +1,6 @@
+Storage classes:
+A StorageClass provides a way for administrators to describe the classes of storage they offer. Different classes might map to quality-of-service levels, or to backup policies, or to arbitrary policies determined by the cluster administrators. Kubernetes itself is unopinionated about what classes represent.
+
+The Kubernetes concept of a storage class is similar to “profiles” in some other storage system designs.
+StorageClass objects:
+a. Each StorageClass contains the fields 'provisioner, parameters, and reclaimPolicy,' which are used when a PersistentVolume belonging to the class needs to be dynamically provisioned to satisfy a PersistentVolumeClaim (PVC).
