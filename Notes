@@ -4,3 +4,6 @@ A StorageClass provides a way for administrators to describe the classes of stor
 The Kubernetes concept of a storage class is similar to “profiles” in some other storage system designs.
 StorageClass objects:
 a. Each StorageClass contains the fields 'provisioner, parameters, and reclaimPolicy,' which are used when a PersistentVolume belonging to the class needs to be dynamically provisioned to satisfy a PersistentVolumeClaim (PVC).
+
+Storage Drivers: AUFS(ubuntu) | ZFS| BTRFS| DEVICE MAPPER| OVERLAY| OVERLAY2
+vOLUME dRIVERS: Local | Azure file storage| DigitalOcean Block Storage| flocker| Google compute  persistent disk| glusterFS| netapp| VMware vSphere Storage
