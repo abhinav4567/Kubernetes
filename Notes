@@ -7,3 +7,6 @@ a. Each StorageClass contains the fields 'provisioner, parameters, and reclaimPo
 
 Storage Drivers: AUFS(ubuntu) | ZFS| BTRFS| DEVICE MAPPER| OVERLAY| OVERLAY2
 vOLUME dRIVERS: Local | Azure file storage| DigitalOcean Block Storage| flocker| Google compute  persistent disk| glusterFS| netapp| VMware vSphere Storage
+
+
+storage classess: Static provisioning and dynamic provisioning
