@@ -10,3 +10,42 @@ vOLUME dRIVERS: Local | Azure file storage| DigitalOcean Block Storage| flocker|
 
 
 storage classess: Static provisioning and dynamic provisioning
+
+controlplane ~ ➜  cat pvc.yaml 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: local-pvc
+spec: 
+ accessModes: 
+ - ReadWriteOnce
+ resources:
+    requests:
+     storage: 500Mi
+ storageClassName: local-storage 
+
+controlplane ~ ➜  cat pv.yaml 
+cat: can't open 'pv.yaml': No such file or directory
+
+controlplane ~ ✖ ls
+nginx.yaml  pvc.yaml
+
+controlplane ~ ➜  cat nginx.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp1
+spec:
+  containers:
+   - name: nginx
+     image: nginx:alpine
+     volumeMounts:
+       - name: local-persisten-volume
+         mountPath: /var/log/html
+
+  volumes:
+   - name: local-persisten-volume
+     persistentVolumeClaim:
+       claimName: local-pvc
+
+controlplane ~ ➜  
